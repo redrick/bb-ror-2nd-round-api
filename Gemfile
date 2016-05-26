@@ -5,12 +5,12 @@ ruby '2.3.0'
 gem 'rails', '4.2.6'
 
 gem 'rails-api'
+gem 'versionist'
+gem 'active_model_serializers'
 
 gem 'pg'
 
 gem 'puma'
-
-gem 'versionist'
 
 group :development, :test do
   gem 'pry'
