@@ -7,6 +7,7 @@ gem 'rails', '4.2.6'
 gem 'rails-api'
 gem 'versionist'
 gem 'active_model_serializers'
+gem 'rack-cors', require: 'rack/cors'
 
 gem 'pg'
 
