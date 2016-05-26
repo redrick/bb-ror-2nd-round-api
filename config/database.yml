@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: db
+  username: postgres
+  password:
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: blueberry_development
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: blueberry_test
+
+production:
+  <<: *default
+  database: blueberry
