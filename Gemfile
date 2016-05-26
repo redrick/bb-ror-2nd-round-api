@@ -13,6 +13,7 @@ gem 'puma'
 gem 'versionist'
 
 group :development, :test do
+  gem 'pry'
   gem 'byebug'
 end
 
