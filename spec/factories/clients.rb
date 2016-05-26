@@ -7,6 +7,9 @@
 #  company_number :string
 #
 
-class Client < ActiveRecord::Base
-  has_many :invoices
+FactoryGirl.define do
+  factory :client do
+    name Faker::Commerce.product_name
+    company_number Faker::Code.ean
+  end
 end

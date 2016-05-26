@@ -6,6 +6,6 @@
 #  name :string
 #
 
-class Category < ActiveRecord::Base
-  has_many :invoices
+describe Category, type: :model do
+  it { should have_many :invoices }
 end

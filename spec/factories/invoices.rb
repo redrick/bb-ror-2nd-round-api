@@ -11,17 +11,13 @@
 #  category_id :integer
 #
 
-class Invoice < ActiveRecord::Base
-  belongs_to :client
-  belongs_to :category
-
-  def price_with_vat
-    (price + vat_only).round(2)
-  end
-
-  private
-
-  def vat_only
-    price / 100 * vat_rate
+FactoryGirl.define do
+  factory :invoice do
+    number Faker::Code.ean
+    price Faker::Commerce.price
+    vat_rate 21
+    issued_at Faker::Time.between(4.months.ago, Date.today, :all)
+    client { create(:client) }
+    category { create(:category) }
   end
 end

@@ -6,6 +6,8 @@
 #  name :string
 #
 
-class Category < ActiveRecord::Base
-  has_many :invoices
+FactoryGirl.define do
+  factory :category do
+    name Faker::Commerce.product_name
+  end
 end

@@ -7,6 +7,6 @@
 #  company_number :string
 #
 
-class Client < ActiveRecord::Base
-  has_many :invoices
+describe Client, type: :model do
+  it { should have_many :invoices }
 end

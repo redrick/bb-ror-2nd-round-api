@@ -15,6 +15,11 @@ gem 'puma'
 group :development, :test do
   gem 'pry'
   gem 'byebug'
+
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :development do
