@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
-    namespace :v1 do
-      resources :hello_world, only: [:index], defaults: { format: :json }
-      resources :invoices, only: [:index], defaults: { format: :json }
-      resource :summary, only: [], defaults: { format: :json } do
+    namespace :v1, defaults: { format: :json } do
+      resources :hello_world, only: [:index]
+      resources :invoices, only: [:index]
+      resource :summary, only: [] do
         get :months, :categories
       end
     end
