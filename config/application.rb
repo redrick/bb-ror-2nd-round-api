@@ -29,5 +29,7 @@ module BbRor2ndRoundApi
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
+
+    config.autoload_paths += %W(#{config.root}/app/services)
   end
 end

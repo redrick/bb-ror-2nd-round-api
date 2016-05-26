@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   namespace :api do
-    api_version(module: 'v1', path: { value: 'v1' }, default: true) do
+    namespace :v1 do
       resources :hello_world, only: [:index], defaults: { format: :json }
       resources :invoices, only: [:index], defaults: { format: :json }
+      resource :summary, only: [], defaults: { format: :json } do
+        get :months, :categories
+      end
     end
   end
 end
