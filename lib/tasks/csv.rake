@@ -1,7 +1,7 @@
 namespace :csv do
   desc 'Import invoices.csv placed in tmp folder'
   task :import => :environment do
-    File.open("tmp/invoices.csv", "r") do |f|
+    File.open('public/invoices.csv', 'r') do |f|
       f.each_line do |line|
         next if line.start_with? 'client name,'
         data = line.split(',')
